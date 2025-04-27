@@ -6,6 +6,10 @@ import {
   SparklesIcon
 } from '@heroicons/react/24/outline' 
 
+import classicJacket from '../assets/images/products/Mens_Slogan_Graphic_Button_Down_Varsity_Jacket_Baseball_Bomber_3850.jpg'
+import classicJacket2 from '../assets/images/products/Retro_Y2K_Hoodie_Gothic_Casual_Alphabet_Blast_Print_Pattern_Skull_2755.jpg'
+import classicJacket3 from '../assets/images/products/SCREENSHOT_Mens_Urban_Hip_Hop_Premium_Fleece_Hoodie_-_Modern_3775.jpg'
+
 const About = () => {
   const features = [
     {
@@ -188,17 +192,17 @@ const About = () => {
               {[
                 { 
                   name: 'Classic Collection',
-                  image: '/src/assets/images/products/Mens_Slogan_Graphic_Button_Down_Varsity_Jacket_Baseball_Bomber_3850.jpg',
+                  image:  classicJacket,
                   description: 'Timeless designs that never go out of style'
                 },
                 { 
                   name: 'Streetwear Collection',
-                  image: '/src/assets/images/products/Retro_Y2K_Hoodie_Gothic_Casual_Alphabet_Blast_Print_Pattern_Skull_2755.jpg',
+                  image: classicJacket2,
                   description: 'Urban-inspired pieces for the modern rebel'
                 },
                 { 
                   name: 'Urban Collection',
-                  image: '/src/assets/images/products/SCREENSHOT_Mens_Urban_Hip_Hop_Premium_Fleece_Hoodie_-_Modern_3775.jpg',
+                  image: classicJacket3,
                   description: 'Contemporary styles for city life'
                 }
               ].map((collection, index) => (
@@ -208,7 +212,7 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="relative group overflow-hidden bg-black/50 backdrop-blur-sm border border-white/10 hover:border-red-500 transition-colors"
+                  className="relative group overflow-hidden  bg-black/50 backdrop-blur-sm border border-white/10 hover:border-red-500 transition-colors "
                 >
                   {/* Diagonal Cut Corners */}
                   <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-red-500 group-hover:border-yellow-500 transition-colors" />
@@ -229,7 +233,7 @@ const About = () => {
 
                   {/* Content Overlay */}
                   <div className="absolute inset-0 flex flex-col justify-end p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="text-white text-xl font-bold mb-2">{collection.name}</h3>
+                    <h3 className="textbg-clip-text bg-gradient-to-r from-red-500 to-yellow-500 text-xl font-bold mb-2">{collection.name}</h3>
                     <p className="text-white/60 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       {collection.description}
                     </p>
