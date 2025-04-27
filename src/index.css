@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Selection */
+::selection {
+  background: rgba(255, 69, 0, 0.3);
+  color: white;
+}
+
+/* Focus Styles */
+*:focus-visible {
+  outline: 2px solid #ff4500;
+  outline-offset: 2px;
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply bg-red-500 text-white font-bold px-4 py-2 text-sm flex items-center gap-2 hover:bg-red-600 transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-white/10 text-white font-bold px-4 py-2 text-sm flex items-center gap-2 hover:bg-white/20 transition-colors;
+}
+
+/* Card Styles */
+.card {
+  @apply bg-black/50 backdrop-blur-sm border border-white/10 p-4 transition-colors;
+}
+
+.card:hover {
+  @apply border-red-500;
+}
+
+/* Input Styles */
+.input {
+  @apply bg-white/10 border border-white/20 text-white placeholder-white/40 px-4 py-2 focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-colors;
+}
+
+/* Link Styles */
+.link {
+  @apply text-white/80 hover:text-white transition-colors;
+}
+
+/* Heading Styles */
+.heading {
+  @apply text-4xl lg:text-5xl font-black tracking-tighter leading-none;
+}
+
+.heading-gradient {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
