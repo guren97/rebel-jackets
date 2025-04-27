@@ -3,6 +3,11 @@ import Hero from '../components/Hero'
 import FeaturedProducts from '../components/FeaturedProducts'
 import Newsletter from '../components/Newsletter'
 
+import hoodieImg from '../assets/images/products/Retro_Y2K_Hoodie_Gothic_Casual_Alphabet_Blast_Print_Pattern_Skull_2755.jpg';
+import jacketImg from '../assets/images/products/KPOP_Rapper_Jeans_Denim_Jacket_Love_Printed_Fashion_Sport_Hip_Hop_4157.jpg';
+import streetwearImg from '../assets/images/products/Mens_Graphic_Print_Long_Sleeve_Drawstring_Hoodie_Pullover_Sweatshirt_2609.jpg';
+
+ 
 const Home = () => {
   return (
     <div className="relative">
@@ -61,20 +66,20 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  name: 'Hoodies',
-                  description: 'Street Style Essentials',
-                  image: '/src/assets/images/products/Retro_Y2K_Hoodie_Gothic_Casual_Alphabet_Blast_Print_Pattern_Skull_2755.jpg'
-                },
-                {
-                  name: 'Jackets',
-                  description: 'Bold & Rebellious',
-                  image: '/src/assets/images/products/KPOP_Rapper_Jeans_Denim_Jacket_Love_Printed_Fashion_Sport_Hip_Hop_4157.jpg'
-                },
-                {
-                  name: 'Streetwear',
-                  description: 'Urban Edge',
-                  image: '/src/assets/images/products/Mens_Graphic_Print_Long_Sleeve_Drawstring_Hoodie_Pullover_Sweatshirt_2609.jpg'
-                }
+                    name: 'Hoodies',
+                    description: 'Street Style Essentials',
+                    image: hoodieImg,
+                  },
+                  {
+                    name: 'Jackets',
+                    description: 'Bold & Rebellious',
+                    image: jacketImg,
+                  },
+                  {
+                    name: 'Streetwear',
+                    description: 'Urban Edge',
+                    image: streetwearImg,
+                  },
               ].map((category, index) => (
                 <motion.div
                   key={category.name}
